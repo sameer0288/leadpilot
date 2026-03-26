@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030303;
+  --foreground: #ffffff;
+  --card: #0a0a0a;
+  --border: rgba(255, 255, 255, 0.05);
+  --primary: #3b82f6;
+  --font-outfit: "Outfit", sans-serif;
+}
+
+@theme {
+  --font-outfit: var(--font-outfit);
+  --color-primary: var(--primary);
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-outfit);
+    margin: 0;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.1);
+  border-radius: 99px;
+}
